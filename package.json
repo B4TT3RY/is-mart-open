@@ -1,20 +1,19 @@
 {
-  "name": "is-mart-open",
+  "name": "is-mart-open-react",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
-    "@tsconfig/svelte": "^2.0.1",
-    "svelte": "^3.37.0",
-    "svelte-check": "^2.1.0",
-    "svelte-preprocess": "^4.7.2",
-    "tslib": "^2.2.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
   }
