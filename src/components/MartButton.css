@@ -8,6 +8,7 @@
 .mart-button-title, .mart-button-subtitle {
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.36) 100%);
     mix-blend-mode: overlay;
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
