@@ -40,5 +40,7 @@
 }
 
 .emart-everyday {
+    background-image: url("/logos/emart_everyday.svg");
     background-color: #ADAFB8;
+    background-size: 57px;
 }
