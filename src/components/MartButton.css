@@ -39,6 +39,11 @@
     background-size: 33px;
 }
 
+.costco {
+    background-image: url("/logos/costco.svg");
+    background-color: #8FCFFF;
+}
+
 .emart-everyday {
     background-image: url("/logos/emart_everyday.svg");
     background-color: #ADAFB8;
