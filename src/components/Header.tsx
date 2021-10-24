@@ -1,11 +1,24 @@
 import { WbSunny } from "@mui/icons-material";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const calculateTime = () => {
+    const now = new Date();
+    return `${now.getHours() < 12 ? "0" : ""}${now.getHours()}:${now.getMinutes()}`;
+  }
+
+  const [time, setTime] = useState(calculateTime());
+
+  useEffect(() => {
+    let secTimer = setInterval(() => setTime(calculateTime), 1000);
+    return () => clearInterval(secTimer);
+  });
+
   return (
     <div className="flex rounded-br-3xl bg-white p-5">
         <h1 className="flex-auto text-2xl font-black">오늘 마트 여나요?</h1>
         <p className="flex-auto text-right text-sm m-auto">
-            현재 시각 오전 11:23 <WbSunny fontSize="inherit" />
+            현재 시각 {time} <WbSunny fontSize="inherit" />
         </p>
     </div>
   );
