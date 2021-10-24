@@ -1,3 +1,10 @@
+.mart-button {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: soft-light;
+    background-position: 100% 100%;
+}
+
 .mart-button-title, .mart-button-subtitle {
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.36) 100%);
     mix-blend-mode: overlay;
@@ -14,15 +21,21 @@
 }
 
 .emart {
-    background: linear-gradient(180deg, #FED681 0%, rgba(254, 206, 103, 0.99) 100%);
+    background-image: url("/logos/emart.svg"),
+                linear-gradient(180deg, #FED681 0%, rgba(254, 206, 103, 0.99) 100%);
+    background-size: 87px 26px, auto;
 }
 
 .traders {
+    background-image: url("/logos/traders.svg");
     background-color: #A9D37E;
+    background-size: 89px;
 }
 
 .homeplus {
+    background-image: url("/logos/homeplus.svg");
     background-color: #F7979B;
+    background-size: 33px;
 }
 
 .emart-everyday {
