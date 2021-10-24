@@ -1,0 +1,30 @@
+.mart-button-title, .mart-button-subtitle {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.36) 100%);
+    mix-blend-mode: overlay;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mart-button-subtitle {
+    font-size: 0.1rem;
+}
+
+.mart-button-logo {
+    mix-blend-mode: soft-light;
+}
+
+.emart {
+    background: linear-gradient(180deg, #FED681 0%, rgba(254, 206, 103, 0.99) 100%);
+}
+
+.traders {
+    background-color: #A9D37E;
+}
+
+.homeplus {
+    background-color: #F7979B;
+}
+
+.emart-everyday {
+    background-color: #ADAFB8;
+}

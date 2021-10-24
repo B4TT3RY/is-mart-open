@@ -1,43 +1,17 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+
+import MartButton from './components/MartButton'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <div className="flex">
+        <MartButton type="emart" title="이마트" />
+        <MartButton type="traders" title="트레이더스" subTitle="이마트" />
+        <MartButton type="homeplus" title="홈플러스" />
+        <MartButton type="costco" title="코스트코" />
+        <MartButton type="emart-everyday" title="에브리데이" subTitle="이마트" />
+      </div>
     </div>
   )
 }
