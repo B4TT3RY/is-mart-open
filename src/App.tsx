@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import MartButton from './components/MartButton'
+import VisitedMart from './components/VisitedMart'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <MartButton type="costco" title="코스트코" />
         <MartButton type="emart-everyday" title="에브리데이" subTitle="이마트" />
       </div>
+
+      <VisitedMart type="traders" name="스타필드 안성점" status="영업중"/>
     </div>
   )
 }
