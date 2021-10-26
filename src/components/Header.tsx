@@ -45,5 +45,6 @@ const Title = styled.div`
     align-items: center;
     margin: auto 0 auto auto;
     font-size: 0.875rem;
+    color: #888888;
   }
 `;

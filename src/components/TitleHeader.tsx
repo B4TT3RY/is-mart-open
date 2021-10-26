@@ -27,6 +27,6 @@ const Header = styled.div`
 
 const HeaderIcon = styled.div`
     border: 2px solid #888888;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     height: 0.4rem;
 `;

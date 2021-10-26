@@ -15,6 +15,7 @@ export default function App() {
         <MartButton type="costco" title="코스트코" />
         <MartButton type="emart-everyday" title="에브리데이" subTitle="이마트" />
       </div>
+      <TitleHeader title="마트의 위치를 찾아주세요" />
     </Container>
   )
 }
