@@ -1,5 +1,5 @@
-import { WbSunny } from "@mui/icons-material";
 import { useEffect, useState } from "react";
+import { MdWbSunny } from "react-icons/md";
 
 export default function Header() {
   const calculateTime = () => {
@@ -18,7 +18,7 @@ export default function Header() {
     <div className="flex rounded-br-3xl bg-white p-5">
         <h1 className="flex-auto text-2xl font-black">오늘 마트 여나요?</h1>
         <p className="flex-auto text-right text-sm m-auto">
-            현재 시각 {time} <WbSunny fontSize="inherit" />
+            현재 시각 {time} <MdWbSunny />
         </p>
     </div>
   );
