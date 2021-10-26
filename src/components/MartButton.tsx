@@ -75,7 +75,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
   margin: 0;
-  font-size: 0.1rem;
+  font-size: 0.8rem;
   line-height: 1;
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.36) 100%);
   mix-blend-mode: overlay;
