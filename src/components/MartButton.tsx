@@ -23,7 +23,7 @@ const Button = styled.div`
   padding-top: 0.625rem;
   padding-left: 0.5rem;
   border-radius: 0.75rem;
-  font-weight: black;
+  font-weight: 900;
 
   background-repeat: no-repeat;
   background-size: contain;
