@@ -19,6 +19,8 @@ export default function MartButton({ type, title, subTitle }: Props) {
 const Button = styled.div`
   width: 6rem;
   height: 4rem;
+  min-width: 95px;
+  min-height: 64px;
   position: relative;
   padding-top: 0.625rem;
   padding-left: 0.5rem;

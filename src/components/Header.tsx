@@ -1,10 +1,14 @@
+import { styled } from "@compiled/react";
+import dayjs from "dayjs";
 import { useEffect, useState } from "react";
-import { MdWbSunny } from "react-icons/md";
+import { MdSchedule } from "react-icons/md";
 
 export default function Header() {
   const calculateTime = () => {
-    const now = new Date();
-    return `${now.getHours() < 12 ? "0" : ""}${now.getHours()}:${now.getMinutes()}`;
+    let current = dayjs(new Date()).format("DD일 A hh:mm");
+    current = current.replace("AM", "오전");
+    current = current.replace("PM", "오후");
+    return current;
   }
 
   const [time, setTime] = useState(calculateTime());
@@ -15,11 +19,31 @@ export default function Header() {
   });
 
   return (
-    <div className="flex rounded-br-3xl bg-white p-5">
-        <h1 className="flex-auto text-2xl font-black">오늘 마트 여나요?</h1>
-        <p className="flex-auto text-right text-sm m-auto">
-            현재 시각 {time} <MdWbSunny />
-        </p>
-    </div>
+    <Title>
+        <h1>오늘 마트 여나요?</h1>
+        <p><MdSchedule />&nbsp;{time}</p>
+    </Title>
   );
 }
+
+const Title = styled.div`
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  border-bottom-right-radius: 1.5rem;
+  padding: 1.5rem;
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    margin: auto 0 auto auto;
+    font-size: 0.875rem;
+  }
+`;
