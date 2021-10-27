@@ -5,15 +5,28 @@ interface Props {
   type: "emart" | "traders" | "homeplus" | "costco" | "emart-everyday";
   title: string;
   subTitle?: string;
+  clicked?: boolean;
 }
 
-export default function MartButton({ type, title, subTitle }: Props) {
+export default function MartButton({ type, title, subTitle, clicked }: Props) {
   return (
-    <Button className={type}>
+    <Button className={`mart-button ${type} ${clicked ? "clicked" : ""}`} onClick={onClick}>
         <Title>{title}</Title>
         <SubTitle>{subTitle}</SubTitle>
     </Button>
   );
+}
+
+const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  document.querySelectorAll(".mart-button").forEach((element) => {
+    element.classList.remove("clicked");
+  });
+  console.log((event.target as Element).tagName);
+  if ((event.target as Element).tagName == "DIV") {
+    (event.target as Element).classList.add("clicked");
+  } else {
+    (event.target as Element).parentElement?.classList.add("clicked");
+  }
 }
 
 const Button = styled.div`
@@ -59,6 +72,10 @@ const Button = styled.div`
     background-image: url("/logos/emart_everyday.svg");
     background-color: #ADAFB8;
     background-size: 57px;
+  }
+
+  &.clicked {
+    border: 3px solid black;
   }
 `;
 
